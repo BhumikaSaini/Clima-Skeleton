@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- TO DO
+    *****Note: Use the names mentioned as id for the views
+
+    (1) Set the activity background
+    (2) Add some padding on all 4 sides
+    (3) Add "cityTextView" to hold city name
+    (4) Add "temperatureTextView" to hold city temperature
+    (5) Add "changeCityImageButton" to change city
+    (6) Add a FrameLayout
+    (7) Add "weatherImageView" to hold weather image
+
+    Set attributes/properties according to the design template provided
+        -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/weather_background"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_city"
+        android:id="@+id/cityTextView"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="90sp"
+        android:text="@string/default_temperature"
+        android:id="@+id/temperatureTextView"
+        android:layout_below="@id/changeCityButton"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/changeCityButton"
+        android:src="@drawable/change_city_symbol_small"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="Button to change the city"
+        android:background="@null"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/weatherImageView"
+            android:src="@drawable/dunno"
+            android:contentDescription="Weather Description Image" />
+
+    </FrameLayout>
+
+</RelativeLayout>
